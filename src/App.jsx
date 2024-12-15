@@ -1,20 +1,14 @@
 import './index.css';
-import { pizzaData } from './utils/data';
+import Header from './components/Header';
+import Menu from './components/Menu';
+import Footer from './components/Footer';
 
 const App = () => {
 	return (
 		<div>
-			{pizzaData.map((pizza) => {
-				return (
-					<div key={pizza.name}>
-						<h2>{pizza.name}</h2>
-						<p>{pizza.ingredients}</p>
-						<p>{pizza.price}</p>
-						<img src={`src/assets/${pizza.photoName}`} alt={pizza.name} />
-						{pizza.soldOut && <p>Sold Out</p>}
-					</div>
-				);
-			})}
+			<Header />
+			<Menu />
+			<Footer />
 		</div>
 	);
 };
