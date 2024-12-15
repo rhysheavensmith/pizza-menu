@@ -27,8 +27,12 @@ const Footer = () => {
 	}, [currentTime]);
 
 	return (
-		<footer>
-			{currentTime} <h2>{open ? `We're open!` : `We're closed`}</h2>
+		<footer className='footer'>
+			<div className='order'>
+				<button className='btn'>Order Now</button>
+				{open ? <h2>We're Open</h2> : <h2>We're Closed</h2>}
+				<p>Current Time: {currentTime}</p>
+			</div>
 		</footer>
 	);
 };

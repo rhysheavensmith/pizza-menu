@@ -2,9 +2,10 @@ import { pizzaData } from '../utils/data';
 import Pizza from './Pizza';
 const Menu = () => {
 	return (
-		<div>
+		<main className='menu'>
 			<h2>Our Menu</h2>
-			<ul>
+			<div className='pizzas'>
+				{/* map over pizzaData and render a Pizza component for each pizza */}
 				{pizzaData.map((pizza, index) => (
 					<Pizza
 						key={index}
@@ -15,8 +16,8 @@ const Menu = () => {
 						soldOut={pizza.soldOut}
 					/>
 				))}
-			</ul>
-		</div>
+			</div>
+		</main>
 	);
 };
 
